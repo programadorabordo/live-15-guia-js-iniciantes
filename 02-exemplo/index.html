@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo 2 Fade in fade out - JS Day #15</title>
+  <style>
+    #container {
+      background-color: #4502cd;
+      color: #fff;
+      display: inline-block;
+      padding: 0 20px;
+      opacity: 1;
+      transition: opacity .3s ease;
+    }
+
+    #container.fade {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <p>Meu primeiro efeito</p>
+  </div>
+  <button id="btnTroca">Troca</button>
+
+  <script>
+    const button = document.querySelector('#btnTroca');
+    button.addEventListener('click', function(event) {
+      document.querySelector('#container')
+        .classList.toggle('fade');
+    })
+  </script>
+</body>
+</html>
